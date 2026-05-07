@@ -17,7 +17,7 @@ export default function PaymentForm() {
   const [expiry, setExpiry] = useState("");
   const [cvv, setCvv] = useState("");
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("INR");
+  const [currency, setCurrency] = useState<"INR" | "USD">("INR");
 
   const [touched, setTouched] = useState<any>({});
 
@@ -74,7 +74,7 @@ export default function PaymentForm() {
       expiry,
       cvv,
       amount: Number(amount),
-      currency,
+      currency ,
     });
   };
 
