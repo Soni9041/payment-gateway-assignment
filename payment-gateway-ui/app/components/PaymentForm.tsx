@@ -186,7 +186,7 @@ export default function PaymentForm() {
             </label>
             <select
               value={currency}
-              onChange={(e) => setCurrency(e.target.value)}
+              onChange={(e) => setCurrency(e.target.value as "INR" | "USD")}
               className="w-full border rounded-lg p-2 mt-1"
             >
               <option value="INR">INR</option>
